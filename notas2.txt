@@ -1,0 +1,72 @@
+let cantidadDeGoles = 0;
+let cantidadDeAtajadas = 0;
+
+const Messi = {
+    lado:[],
+    potencia: []
+}
+
+const Arquero = {
+    lado: [],
+    potencia: []
+}
+
+console.log("LADOS: 1 arriba izq, 2 abajo izq, 3 arriba medio, 4 abajo medio, 5 arriba der, 6 abajo der, 7 afuera.")
+console.log("---------------------------------------------")
+
+for (let i = 1; i <= 5; i++){
+    Messi.lado.push(parseInt(prompt("Ingresar lado donde se tirará el penal Messi, sabiendo que (1 arriba izq, 2 abajo izq, 3 arriba medio, 4 abajo medio, 5 arriba der, 6 abajo der, 7 afuera):")))
+
+
+    Arquero.lado.push(parseInt(prompt("Ingresar lado donde se tirará el arquero, sabiendo que (1 arriba izq, 2 abajo izq, 3 arriba medio, 4 abajo medio, 5 arriba der, 6 abajo der):")))
+
+    Messi.potencia.push(parseInt(prompt("Potencia con la que Messi tirará el penal, sabiendo que (se utlizan valores del 1 al 100):")))
+
+
+    Arquero.potencia.push(parseInt(prompt("Potencia con la que se tirará el arquero, sabiendo que (se utlizan valores del 1 al 100):")))
+}
+
+console.table(Messi)
+console.table(Arquero)
+
+for (let i = 1; i <= 5; i++){
+    console.log("-------- Penal: " + i + " ---------------")
+    if (Messi.lado[i - 1] == 7){
+        console.log("Messi la tiro afuera :C")
+        cantidadDeAtajadas += 1;
+        document.write('<div class="txtMessiCampeon"> Penal: </div>' + i)
+        document.write('<div class="atajada"><img src="assets/atajada.jpg" /></div>')
+    }
+    else if (Messi.lado[i - 1] != Arquero.lado[i - 1]){
+        console.log("GOOOL DE MESSI")
+        cantidadDeGoles += 1;
+        document.write('<div class="txtMessiCampeon"> Penal: </div>' + i)
+        document.write('<div class="gol"><img src="assets/golMessi.jpg" /></div>')
+    }
+    else if (Messi.lado[i - 1] == Arquero.lado[i - 1]){
+        if (Messi.potencia[i - 1] > Arquero.potencia[i - 1]){
+            console.log("GOOOL DE MESSI - ", "Messi: " + Messi.potencia[i - 1], "Arquero: " + Arquero.potencia[i - 1]);
+            cantidadDeGoles += 1;
+            document.write('<div class="txtMessiCampeon"> Penal: </div>' + i)
+            document.write('<div class="gol"><img src="assets/golMessi.jpg" /></div>')
+/*             console.log("Gana messi por potencia") */
+        }else{
+            console.log("LA ATAJO EL ARQUERO - ", "Messi: " + Messi.potencia[i - 1], "Arquero: " + Arquero.potencia[i - 1]);
+            cantidadDeAtajadas += 1;
+            document.write('<div class="txtMessiCampeon"> Penal: </div>'+ i)
+            document.write('<div class="atajada"><img src="assets/atajada.jpg" /></div>')
+        }
+    }
+}
+
+console.log("-----------------------------")
+
+if(cantidadDeGoles > cantidadDeAtajadas){
+    console.log("GANO MESSI - " + "Cantidad de goles: " + cantidadDeGoles)
+    document.write('<div class="txtMessiCampeon"> MESSI CAMPEÓN </div>')
+    document.write('<div class="balonDeOro"><img src="assets/balonDeOro.jpg" /></div>')
+}else{
+    console.log("GANO EL ARQUERO - " + "Cantidad de atajadas: " + cantidadDeAtajadas)
+    document.write('<div class="txtArqCampeon"> ARQUERO CAMPEÓN </div>')
+    document.write('<div class="f"><img src="assets/arqueroCampeon.jpg" /></div>')
+}

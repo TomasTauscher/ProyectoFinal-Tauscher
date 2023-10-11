@@ -1,0 +1,71 @@
+let cantidadDeGoles = 0;
+let cantidadDeAtajadas = 0;
+let penalesTirados = 0;
+const maxPenales = 5;
+
+var arrayMessi = new Array();
+var arrayArquero = new Array();
+
+const penalesForm = document.getElementById('penalesForm');
+const resultadosDiv = document.getElementById('resultados');
+const agregarPenalBoton = document.getElementById('agregarPenal');
+
+agregarPenalBoton.addEventListener('click', function () {
+    if (penalesTirados < maxPenales) {
+        const ladoMessi = parseInt(document.getElementById('ladoMessi').value);
+        const ladoArquero = parseInt(document.getElementById('ladoArquero').value);
+        const potenciaMessi = parseInt(document.getElementById('potenciaMessi').value);
+        const potenciaArquero = parseInt(document.getElementById('potenciaArquero').value);
+
+        const penal = {
+            nombre: "Messi",
+            potencia: potenciaMessi,
+            lado: ladoMessi
+        };
+
+        const arquero = {
+            nombre: "Arquero",
+            potencia: potenciaArquero,
+            lado: ladoArquero
+        };
+
+        arrayMessi.push(penal);
+        arrayArquero.push(arquero);
+
+        mostrarResultado(`Penal: ${arrayMessi.length}, Resultado: ${calcularResultado(penal, arquero)}<br>`);
+
+        document.getElementById('ladoMessi').value = '';
+        document.getElementById('ladoArquero').value = '';
+        document.getElementById('potenciaMessi').value = '';
+        document.getElementById('potenciaArquero').value = '';
+
+        penalesTirados++;
+
+        if (penalesTirados === maxPenales) {
+            agregarPenalBoton.disabled = true;
+            mostrarResultado("<strong>Final de la tanda</strong><br>");
+        }
+    }
+});
+
+function calcularResultado(penal, arquero) {
+    if (penal.lado == 7) {
+        cantidadDeAtajadas += 1;
+        return "Messi la tiro afuera :C <br><img src='./assets/atajada.jpg'>";
+    } else if (penal.lado != arquero.lado) {
+        cantidadDeGoles += 1;
+        return "GOOOL DE MESSI <br><img src='./assets/golMessi.jpg'>";
+    } else if (penal.lado == arquero.lado) {
+        if (penal.potencia > arquero.potencia) {
+            cantidadDeGoles += 1;
+            return `GOOOL DE MESSI - Messi: ${penal.potencia}, Arquero: ${arquero.potencia}<br><img src='./assets/golMessi.jpg'>`;
+        } else {
+            cantidadDeAtajadas += 1;
+            return `LA ATAJO EL ARQUERO - Messi: ${penal.potencia}, Arquero: ${arquero.potencia}<br><img src='./assets/atajada.jpg'>`;
+        }
+    }
+}
+
+function mostrarResultado(texto) {
+    resultadosDiv.innerHTML += texto;
+}

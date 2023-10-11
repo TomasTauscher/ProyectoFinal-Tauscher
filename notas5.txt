@@ -1,0 +1,18 @@
+1- Programacion con estructuras basicas  ------LISTO
+2- DOM                                   ------LISTO
+3- Eventos                               ------LISTO
+4- Hof - Array Methods                   ------LISTO
+5- Local Storage                         ------LISTO
+6- Librerias                             ------LISTO
+7- Programacion asincronica con Fetch API, Fetch JSON
+8- Proyecto Publicado
+9- Proyecto Github
+10- Programacion con clases       ------LISTO
+11- Procesos de optimizacion      ------LISTO
+
+IMPLEMENTACIONES
+- modo dark
+- carrusel                        ------LISTO
+- diseño responsive
+- diseño prolijo                  ------LISTO
+- interaccion con el usuario      ------LISTO

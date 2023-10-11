@@ -1,0 +1,36 @@
+Pautas:
+
+variables
+- let  ---> USADO
+- const ---> USADO
+
+operadores
+- resta ---> USADO
+- asignacion ---> USADO
+- comparacion ---> USADO
+
+condicionales
+- if ---> USADO
+- else if ---> USADO
+- switch
+
+ciclos
+- for ---> USADO
+- while
+- do while
+
+funciones ---> USADO
+
+prompt ---> USADO
+
+metodo array ---> USADO
+
+objeto array ---> USADO
+
+
+
+Numero random
+let x = Math.random()*100
+let x = Math.round()*100  redondea al mas cercano 12,6-->13
+let x = Math.floor()*100  redondea al piso  0,99-->0
+let x = Math.ceil()*100  redondea para arriba  0,01-->1

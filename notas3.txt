@@ -1,0 +1,3 @@
+HTML ---> USADO
+DOM ---> USADO
+JSON y storage---> USADO

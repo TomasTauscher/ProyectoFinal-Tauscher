@@ -1,0 +1,73 @@
+body{
+    background-color: aqua;
+}
+#carouselExampleIndicators {
+    max-width: 600px;
+/*     margin: 0 auto; */
+}
+
+.divh1{
+    background-color:cornflowerblue;
+}
+
+.h2{
+    font-size: medium;
+}
+
+.penal{
+    position: relative;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+
+.atajada{
+/*     display: block;
+    clear: both;
+    margin: 30px auto;
+    width: 100px;
+    padding: 0 10px;
+    box-shadow: 0 8px 16px 0 greenyellow; */
+    max-width: 600px;
+}
+.gol{
+/*     display: block;
+    clear: both;
+    margin: 30px auto;
+    width: 80%;
+    padding: 0 10px;
+    box-shadow: 0 8px 16px 0 greenyellow; */
+    max-width: 600px;
+}
+.txtMessiCampeon{
+    position: relative;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+.balonDeOro{
+/*     margin: 10px 30px;
+    height: 300px;
+    width: 200px;
+    padding: 0 10px;
+    box-shadow: 0 8px 16px 0 greenyellow; */
+    max-width: 600px;
+}
+.txtArqCampeon{
+    position: relative;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+.f{
+/*     display: block;
+    clear: both;
+    margin: 30px auto;
+    width: 80%;
+    padding: 0 10px;
+    box-shadow: 0 8px 16px 0 greenyellow; */
+    max-width: 600px;
+}
