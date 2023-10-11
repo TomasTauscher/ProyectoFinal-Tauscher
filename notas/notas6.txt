@@ -90,11 +90,11 @@ function calcularResultado(penal, arquero) {
         return `Messi la tiro afuera :C <br><img src='./assets/atajada.jpg' class="atajada">`;
     } else if (penal.lado != arquero.lado) {
         cantidadDeGoles += 1;
-        return `GOOOL DE MESSI <br><img src='./assets/golMessi.jpg' class="gol">`;
+        return `GOOOL DE MESSI <br><img src='./assets/golMessi.jpg' class=".gol">`;
     } else if (penal.lado == arquero.lado) {
         if (penal.potencia > arquero.potencia) {
             cantidadDeGoles += 1;
-            return `GOOOL DE MESSI - Messi: ${penal.potencia}, Arquero: ${arquero.potencia}<br><img src='./assets/golMessi.jpg' class="gol">`;
+            return `GOOOL DE MESSI - Messi: ${penal.potencia}, Arquero: ${arquero.potencia}<br><img src='./assets/golMessi.jpg' class=".gol">`;
         } else {
             cantidadDeAtajadas += 1;
             return `LA ATAJO EL ARQUERO - Messi: ${penal.potencia}, Arquero: ${arquero.potencia}<br><img src='./assets/atajada.jpg' class="atajada">`;
@@ -112,18 +112,7 @@ function guardarEnLocalStorage() {
 }
 
 const btn = document.querySelector('#myBtn')
-btn.addEventListener('click', async () => {
-    try {
-        const response = await fetch('datos.json');
-        if (response.ok) {
-            const data = await response.json();
-            mostrarDatosJSON(data);
-        } else {
-            console.error('Error al obtener datos JSON');
-        }
-    } catch (error) {
-        console.error('Error en la solicitud: ', error);
-    }
+btn.addEventListener('click', () => {
 
     Swal.fire({
         title: 'Comenzemos!',
@@ -135,14 +124,6 @@ btn.addEventListener('click', async () => {
         confirmButtonText: ' Vamos Selección! '
     })
 })
-
-function mostrarDatosJSON(data) {
-    const resultadosDiv = document.getElementById('resultados');
-    resultadosDiv.innerHTML = '<h2>Datos JSON:</h2>';
-    for (const item of data) {
-        resultadosDiv.innerHTML += `<p>Nombre: ${item.nombre}, Potencia: ${item.potencia}, Lado: ${item.lado}</p>`;
-    }
-}
 
 const btn2 = document.querySelector('#agregarPenal')
 btn2.addEventListener('click', () => {

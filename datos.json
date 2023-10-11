@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "Ej1",
+        "potencia": 80,
+        "lado": 2
+    },
+    {
+        "nombre": "Ej2",
+        "potencia": 70,
+        "lado": 5
+    }
+]

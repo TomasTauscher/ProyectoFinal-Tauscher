@@ -4,9 +4,9 @@
 4- Hof - Array Methods                   ------LISTO
 5- Local Storage                         ------LISTO
 6- Librerias                             ------LISTO
-7- Programacion asincronica con Fetch API, Fetch JSON
-8- Proyecto Publicado
-9- Proyecto Github
+7- Programacion asincronica con Fetch API, Fetch JSON  ------LISTO
+8- Proyecto Publicado             ------LISTO
+9- Proyecto Github                ------LISTO
 10- Programacion con clases       ------LISTO
 11- Procesos de optimizacion      ------LISTO
 
