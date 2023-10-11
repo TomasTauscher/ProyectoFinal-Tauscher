@@ -149,3 +149,20 @@ const diaHorario = DateTime.fromObject(
 const resultadoDiv = document.getElementById('horario');
 const resultadoText = document.createTextNode(diaHorario.toString());
 resultadoDiv.appendChild(resultadoText);
+
+
+
+
+
+
+
+
+.gol{
+/*     display: block;
+    clear: both;
+    margin: 30px auto;
+    width: 80%;
+    padding: 0 10px;
+    box-shadow: 0 8px 16px 0 greenyellow; */
+    max-width: 600px;
+}
